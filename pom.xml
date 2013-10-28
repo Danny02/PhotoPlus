@@ -29,7 +29,7 @@
         <dependency>
             <groupId>org.scalafx</groupId>
             <artifactId>scalafx_2.10</artifactId>
-            <version>1.0.0-M3</version>
+            <version>1.0.0-M4</version>
         </dependency>
         <dependency>
             <groupId>com.google.gdata</groupId>
@@ -137,29 +137,30 @@
                 </executions>
             </plugin>-->
 
-            <!-- have a look at http://www.zenjava.com/2012/11/24/from-zero-to-javafx-in-5-minutes/ -->
             <plugin>
                 <groupId>com.zenjava</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>1.3</version>
-                <executions>
-<!--                    <execution>
-                        <id>create-final-jar</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>build-jar</goal>
-                        </goals>
-                    </execution>-->
-                </executions>
+                <version>2.0-SNAPSHOT</version>
                 <configuration>
                     <vendor>${project.organization.name}</vendor>
                     <mainClass>de.dheinrich.photoplus.PhotoPlus</mainClass>
-                    <permissions>
-                        <permission>all-permissions</permission>
-                    </permissions>
+                    <allPermissions>true</allPermissions>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
+    
+    <pluginRepositories>
+        <pluginRepository>
+            <id>sonatype.snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+            <snapshots>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
 </project>

@@ -15,7 +15,7 @@
   <children>
     <AnchorPane fx:id="appPane" disable="true" prefHeight="576.0" prefWidth="688.99977792969" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
-        <ComboBox fx:id="albums" editable="true" prefHeight="35.0" prefWidth="211.0" promptText="Select Album" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+        <ComboBox fx:id="albums" editable="true" onAction="#onAlbumSelected" prefHeight="35.0" prefWidth="211.0" promptText="Select Album" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
         <ProgressBar fx:id="totalProgress" minHeight="0.0" prefHeight="19.0" prefWidth="688.99977792969" progress="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
         <Button fx:id="button" mnemonicParsing="false" onAction="#onUpload" prefHeight="35.0" prefWidth="97.0" text="Upload" AnchorPane.leftAnchor="239.0" AnchorPane.topAnchor="14.0" />
         <TableView fx:id="imageTable" onDragDropped="#onFilesDropped" onDragOver="#checkDragContend" prefHeight="468.0" prefWidth="658.99977792969" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="75.0">
@@ -24,9 +24,10 @@
             <TableColumn editable="false" maxWidth="5000.0" minWidth="10.0" prefWidth="130.0" resizable="false" sortable="true" text="Upload Progress" fx:id="progressColumn" />
           </columns>
         </TableView>
+        <Hyperlink onAction="#onLogout" text="Logout" textAlignment="RIGHT" textFill="#0021cc" underline="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
       </children>
     </AnchorPane>
-    <Pane fx:id="loginPane" prefHeight="576.0" prefWidth="688.99977792969" style="-fx-background-color: rgba(255, 255, 255, 0.6)" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <Pane fx:id="loginPane" prefHeight="576.0" prefWidth="688.99977792969" style="-fx-background-color: rgba(255, 255, 255, 0.6)" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
         <HBox alignment="CENTER" layoutX="0.0" layoutY="238.0" prefHeight="100.0" prefWidth="688.999755859375" spacing="20.0" style="-fx-background-color: rgb(22,105,222,1)">
           <children>
