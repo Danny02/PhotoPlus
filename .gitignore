@@ -1,3 +1,7 @@
+*.iml
+nb*.xml
+.idea
+jobs
 target/
 .settings
 .classpath
